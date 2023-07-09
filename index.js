@@ -13,7 +13,7 @@ app.use('/api/note',require('./routes/note'));
 
 app.get('*',(req,res,next)=>{
   res.status(200).json({
-    message:'bad request'
+    message:'bad request hii nurul'
   })
 })
 
