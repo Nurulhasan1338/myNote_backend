@@ -3,7 +3,6 @@ const cors = require('cors')
 const express = require('express')
 connectToMongo();  
 const app = express()
-const port = 5000;
 
 app.use(cors());
 app.use(express.json());
@@ -17,6 +16,4 @@ app.get('*',(req,res,next)=>{
   })
 })
 
-app.listen(port, () => {
-  console.log(`app listening on http://localhost:${port}`)
-})
+module.exports = app;
