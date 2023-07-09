@@ -4,11 +4,12 @@ const { body, validationResult } = require("express-validator"); // use "npm ins
 const fetchuser = require("../middleware/fetchuser");
 const router = express.Router();
 const User = require("../module/User");
+require('dotenv').config();
 const bycrypt = require("bcrypt");
 
 // for JWT authetication
 var jwt = require("jsonwebtoken");
-const JWT_SECRET = "hi_i_am_n_hasan";
+const JWT_SECRET = process.env.JWT_SECRET;
 
 // route 1 for creating user
 
